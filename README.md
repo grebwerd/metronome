@@ -1,2 +1,2 @@
 # metronome
-flutter metronome app
+flutter metronome app using voice commands

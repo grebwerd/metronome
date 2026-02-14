@@ -34,6 +34,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  metronome: ^2.0.7
+  speech_to_text: ^7.0.0
 
 dev_dependencies:
   flutter_test:
@@ -51,7 +53,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/audio/base44_wav.wav
+    - assets/audio/claves44_wav.wav
+    - assets/audio/hihat44_wav.wav
+    - assets/audio/snare44_wav.wav
+    - assets/audio/sticks44_wav.wav
+    - assets/audio/woodblock_high44_wav.wav
+    - assets/metronome-left.png
+    - assets/metronome-right.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

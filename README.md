@@ -1,6 +1,6 @@
 # metronome_app
 
-A new Flutter project.
+Metronome App using voice commands
 
 ## Getting Started
 

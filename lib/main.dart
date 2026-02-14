@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:metronome/metronome.dart';
+import 'package:logger/logger.dart';
 
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final logger = Logger(level: Level.info);
   final _metronomePlugin = Metronome();
   bool isplaying = false;
   int bpm = 120;
@@ -45,11 +47,13 @@ class _MyAppState extends State<MyApp> {
       timeSignature: timeSignature,
       sampleRate: 44100,
     );
-    print("init:${_metronomePlugin.isInitialized}");
+
+
+    logger.d("init:${_metronomePlugin.isInitialized}");
     _metronomePlugin.tickStream.listen(
       (int tick) {
         currentTick = tick;
-        print("tick: $tick");
+        logger.d("tick: $tick");
         if (metronomeIcon == metronomeIconRight) {
           metronomeIcon = metronomeIconLeft;
         } else {
